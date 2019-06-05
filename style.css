@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  background: #ff7000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.clock {
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  border: solid white 1.5em;
+  padding: 2em;
+  background: rgba(35, 35, 35, 0.95);
+}
+
+.clock__face {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateY(-0.75em);
+}
+
+.clock__face:after {
+  content: "";
+  height: 2.5em;
+  width: 2.5em;
+  position: absolute;
+  right: 46%;
+  top: 48.7%;
+  background: #ff7000;
+  border-radius: 50%;
+}
+
+.hand {
+  width: 50%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  border-radius: 5px;
+}
+
+.hour__hand {
+  width: 35%;
+  right: 50%;
+  height: 1.5em;
+}
+
+.min__hand {
+  height: 1.5em;
+  right: 50%;
+}
+
+.second__hand {
+  height: 1.5em;
+  right: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1em;
+}
+
+select {
+  display: block;
+  padding: 10px 70px 10px 13px;
+  max-width: 100%;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  background: url("https://i.ibb.co/b7xjLrB/selectbox-arrow.png") right center
+    no-repeat;
+  background-color: #fff;
+  color: #444444 !important;
+  font-size: 12px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+option {
+  color: #444444 !important;
+}
+
+label {
+  text-align: center;
+  color: white;
+}
